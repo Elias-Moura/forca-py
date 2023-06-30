@@ -22,6 +22,18 @@ def jogar():
 
     while not enforcou and not acertou:
         print('inicio')
+        chute = input('Digite uma letra: ').lower().strip()[0]
+
+        index = 0
+        letras_acertadas = list()
+        letras_erradas = list()
+        for letra in palavra_secreta:
+            if chute == letra:
+                print(f'Encontrei a letra {letra} na posição {index}')
+            else:
+                print(f'A letra {chute} não está contida na palavra secreta.')
+            index += 1
+
 
 if __name__ == '__main__':
     jogar()
